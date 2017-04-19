@@ -1,16 +1,8 @@
-<% if model.errors.any? %>
+<% flash.each do |message_type, message| %>
 
-  <div class="alert alert-warning">
-    <ul>
-      
-<% model.errors.full_messages.each do |message| %>
-
-        <li>
+  <div class="alert alert-
+<%= message_type %>
+">
 <%= message %>
-</li>
-      
-<% end %>
-
-    </ul>
-  </div>
+</div>
 <% end %>
