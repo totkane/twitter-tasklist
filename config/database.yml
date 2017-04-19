@@ -48,7 +48,10 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: twitter-tasklist_production
-  username: twitter-tasklist
-  password: <%= ENV['TWITTER-TASKLIST_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: message-board_production
+  username: message-board
+  password: <%= ENV['MESSAGE-BOARD_DATABASE_PASSWORD'] %>
+  
